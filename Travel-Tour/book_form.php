@@ -1,6 +1,10 @@
 <?php
 
-   $connection = mysqli_connect('localhost','root','root','travel_book',3308);
+   $servername="localhost";
+   $username="root";
+   $password="";
+   $dbname="travel_book";
+   $connection = mysqli_connect($servername,$username,$password,$dbname);
 
    if(isset($_POST['send'])){
       $name = $_POST['name'];
@@ -13,10 +17,13 @@
       $leaving = $_POST['leaving'];
 
       $request = " insert into book_form(name, email, phone, address, location, guests, arrivals, leaving) values('$name','$email','$phone','$address','$location','$guests','$arrivals','$leaving') ";
-      mysqli_query($connection, $request);
-
-      header('location:book.php'); 
-
+      $rs=mysqli_query($connection, $request);
+      if($rs){
+         echo "<script>alert('Your Booking Request has been sent successfully')</script>";
+      }
+      else{
+         echo "<script>alert('Your Booking Request has not been sent successfully')</script>";
+      }
    }else{
       echo 'something went wrong please try again!';
    }
