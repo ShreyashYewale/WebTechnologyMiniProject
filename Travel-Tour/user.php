@@ -20,7 +20,7 @@
       $rs=mysqli_query($connection, $request);
       if($rs)
       {
-         header("Location:home.html");
+         header("Location:main.html");
       }
       else{
          echo "<script>alert('Please enter valid credentials')</script>";

@@ -19,7 +19,7 @@
         if($rs){
            $row = mysqli_fetch_array($rs);
            if($row){
-              header('location:home.html');
+              header('location:mainhome.html');
            }
            else{
              
