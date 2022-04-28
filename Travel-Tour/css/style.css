@@ -19,7 +19,6 @@
    box-sizing: border-box;
    outline: none; border:none;
    text-decoration: none;
-   text-transform: capitalize;
 }
 
 html{
@@ -124,6 +123,21 @@ section{
    display: none;
 }
 
+.login-btn{
+     background-color: #df5a45;
+     border-radius: 0.5rem ;
+     color: #fff !important ;
+     font-size: 1.5rem !important ;
+     padding: 1rem 1.5rem !important ;
+                                 
+}
+.signup-btn{
+    background-color: #3e3f61;
+     border-radius: 0.5rem ;
+     color: #fff !important ;
+     font-size: 1.5rem !important ;
+     padding: 1rem 1.5rem !important ;
+}
 .home{
    padding:0;
 }
